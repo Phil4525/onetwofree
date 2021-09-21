@@ -56,7 +56,7 @@ class Brief
     private $document;
 
     /**
-     * @Vich\UploadableField(mapping="product_images", fileNameProperty="document")
+     * @Vich\UploadableField(mapping="uploads", fileNameProperty="document")
      * @var File
      */
     private $file;

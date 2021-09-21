@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
-use App\Entity\Contacts;
-use App\Form\ContactType;
+use App\Entity\Concours;
+use App\Entity\Candidats;
+use App\Form\CandidatType;
+use App\Form\ConcoursType;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
@@ -11,26 +13,24 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class FormulaireContactController extends AbstractController
+class CandidatController extends AbstractController
 {
     /**
-     * @Route("/contact", name="formulaire_contact", methods={"GET","POST"})
+     * @Route("/candidat", name="candidat")
      */
     public function index(Request $request, MailerInterface $mailer): Response
     {
-        $contact=new Contacts();
-        $form = $this->createForm(ContactType::class, $contact);
+        $candidat=new Candidats();
+        $form = $this->createForm(CandidatType::class, $candidat);
         $form->handleRequest($request);
-        ;
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($contact);
+            $entityManager->persist($candidat);
             $entityManager->flush();
-            
+
             $user = $form->getData();
             $url =  './uploads/' . $user->getDocument();
-
             $mail = (new Email())
                 ->from($user->getEmail())
                 ->to('philippe.mariou@colombbus.org')
@@ -38,7 +38,7 @@ class FormulaireContactController extends AbstractController
                 //->bcc('bcc@example.com')
                 //->replyTo('fabien@example.com')
                 //->priority(Email::PRIORITY_HIGH)
-                ->subject('Nouvelle demande de contact')
+                ->subject('Nouveau candidat !')
                 ->text('Sender : '.$user->getEmail().\PHP_EOL.$user->getMessage(),'text/plain')
                 ->html('<p>See Twig integration for better HTML integration!</p>');
                 if ( $user->getDocument()) {
@@ -47,9 +47,7 @@ class FormulaireContactController extends AbstractController
                 }
                 ;
             $mailer->send($mail);
-
-           
-            //return $this->redirectToRoute('contact_success');
+            
             $url = $this->generateUrl('home');
             return new Response("
             <html>
@@ -61,9 +59,8 @@ class FormulaireContactController extends AbstractController
             ");
         }
 
-        return $this->render('contact/index.html.twig', [
+        return $this->render('candidat/index.html.twig', [
             'form' => $form->createView(),
         ]);
     }
-
 }
