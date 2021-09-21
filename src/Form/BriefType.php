@@ -8,6 +8,7 @@ use Gregwar\CaptchaBundle\Type\CaptchaType;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class BriefType extends AbstractType
 {
@@ -19,7 +20,9 @@ class BriefType extends AbstractType
             ->add('entreprise')
             ->add('telephone')
             ->add('email')
-            ->add('message')
+            ->add('message', TextareaType::class, [
+                'attr' => ['class' => 'tinymce'],
+            ])
             ->add('file', VichFileType::class, [
                 'required' => false,
                 'allow_delete' => true,
