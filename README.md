@@ -15,10 +15,10 @@
     - password: password
   
 ## Servers:
-- Php: 
+- Symfony (Php): 
   - symfony server:start -d
   - symfony server:stop
-- JS:
+- Webpack (JS):
   - npm run dev
 - Docker (Mysql, Phpmyadmin, Mailcatcher):
   - docker-compose start
