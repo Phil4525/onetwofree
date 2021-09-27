@@ -30,6 +30,10 @@ services: # adds 2 services: mysql and phpmyadmin to connect with
       # MYSQL_USER: newuser
       # MYSQL_PASSWORD: mypassword
 
+  mailer:
+    image: schickling/mailcatcher
+    ports: [1025, 1080]
+
   
 
 volumes: # add persistent data even if container is removed.
