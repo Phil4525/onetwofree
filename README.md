@@ -20,7 +20,7 @@
   - symfony server:stop
 - JS:
   - npm run dev
-- Mysql:
+- Docker (Mysql, Phpmyadmin, Mailcatcher):
   - docker-compose start
   - docker-compose stop
   - Pour compiler: docker-compose up -d 
