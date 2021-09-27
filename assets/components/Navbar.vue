@@ -18,7 +18,14 @@
           class="slogan"
         />
       </b-navbar-brand>
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle target="nav-collapse">
+        <img
+          class="burger"
+          src="../../public/assets/image/svg/burgerBlanc.svg"
+          alt="burger"
+        />
+      </b-navbar-toggle>
+
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="liens">
           <router-link
@@ -75,6 +82,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.burger {
+  width: 100px;
+}
 .logo {
   width: 300px;
 }

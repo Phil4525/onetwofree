@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style scoped>
+div {
+  cursor: default;
+}
 .dynamic-text-shadow {
   text-shadow: 0.1em 0.1em 0 #265973;
 }

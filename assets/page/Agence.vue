@@ -14,7 +14,7 @@
           ><span class="accolade">}</span>
         </h2>
         <b-row class="mt-5">
-          <b-col class="text-center">
+          <b-col class="text-center" md="12" lg="6">
             <h3>Notre histoire</h3>
             <p>
               L’idée de créer une agence web est venue autour d’une table en
@@ -34,7 +34,7 @@
               idées…
             </p>
           </b-col>
-          <b-col>
+          <b-col md="12" lg="6">
             <h3 class="text-center">Notre concept</h3>
             <img
               class="accroche d-block mx-auto mt-4"

@@ -19,6 +19,10 @@
                   <input type="text" name="nom" class="champs" />
                 </div>
                 <div class="info">
+                  <label for="contact">Votre contact</label>
+                  <input type="text" name="contact" class="champs" />
+                </div>
+                <div class="info">
                   <label for="objet">Objet de votre message</label>
                   <input type="text" name="objet" class="champs" />
                 </div>

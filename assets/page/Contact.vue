@@ -9,6 +9,30 @@
           >}</span
         >
       </h1>
+      <b-row class="mt-5 text-center">
+        <b-col class="text-white">
+          <h2>Contactez-nous</h2>
+          <button type="button" class="btn" @click="isModalVisible = true">
+            <img
+              class="form2"
+              src="../../public/assets/image/logofooter4.png"
+              alt="illustration Contact"
+            />
+          </button>
+          <!-- <Modal v-show="isModalVisible1" @close="isModalVisible1 = false"> -->
+        </b-col>
+        <b-col class="text-white">
+          <h2>.oneTwoBrief</h2>
+          <p class="text-center">C'est quoi l'idée ?</p>
+          <button type="button" class="btn" @click="isModalVisible2 = true">
+            <img
+              class="form2"
+              src="../../public/assets/image/calcul.jpg"
+              alt="illustration brief / devis"
+            />
+          </button>
+        </b-col>
+      </b-row>
       <b-row>
         <b-col class="text-white">
           <h3>Informations pratiques</h3>
@@ -22,7 +46,7 @@
             loading="lazy"
           ></iframe>
         </b-col>
-        <b-col class="col-adresse">
+        <!-- <b-col class="col-adresse">
           <address class="adresse d-flex">
             <div class="mb-3">
               <img
@@ -48,31 +72,7 @@
               Email : onetwofreeagency@gmail.com</a
             >
           </address>
-        </b-col>
-      </b-row>
-      <b-row class="mt-5">
-        <b-col class="text-white">
-          <h2>Contactez-nous</h2>
-          <button type="button" class="btn" @click="isModalVisible = true">
-            <img
-              class="form2"
-              src="../../public/assets/image/logofooter4.png"
-              alt="illustration Contact"
-            />
-          </button>
-          <!-- <Modal v-show="isModalVisible1" @close="isModalVisible1 = false"> -->
-        </b-col>
-        <b-col class="text-white">
-          <h2>.oneTwoBrief</h2>
-          <p class="text-center">C'est quoi l'idée ?</p>
-          <button type="button" class="btn" @click="isModalVisible2 = true">
-            <img
-              class="form2"
-              src="../../public/assets/image/calcul.jpg"
-              alt="illustration brief / devis"
-            />
-          </button>
-        </b-col>
+        </b-col> -->
       </b-row>
     </b-container>
     <FormulaireCR v-show="isModalVisible" @close="closeModal" />

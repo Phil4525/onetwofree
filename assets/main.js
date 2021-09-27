@@ -53,7 +53,6 @@ import StrategieContent from './page/StrategieContent'
 import DeveloppementCode from './page/DeveloppementCode'
 import StratDigitale from './page/StratDigitale'
 import Realisations from './page/Realisations'
-import WorksTest from './page/WorksTest'
 
 
 
@@ -83,15 +82,6 @@ const routes = [
   { path: '/DeveloppementCode', name: 'DeveloppemengtCode', component: DeveloppementCode },
   { path: '/StratDigitale', name: 'StratDigitale', component: StratDigitale },
   { path: '/Realisations', name: 'Realisations', component: Realisations },
-  { path: '/WorksTest', name: 'WorksTest', component: WorksTest },
-
-
-
-
-
-
-
-
 ]
 
 const router = new VueRouter({
