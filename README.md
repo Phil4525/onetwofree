@@ -16,7 +16,7 @@
   
 ## Servers:
 - Symfony (Php): 
-  - symfony server:start -d
+  - symfony serve -d
   - symfony server:stop
 - Webpack (JS):
   - npm run dev
