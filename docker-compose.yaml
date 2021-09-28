@@ -1,5 +1,5 @@
 version: '3.7'
-services: # adds 2 services: mysql and phpmyadmin to connect with
+services:
   db:
     image: mysql:latest # use latest version of mysql
     container_name: db # add a name for the container
